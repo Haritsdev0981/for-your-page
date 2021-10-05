@@ -1,0 +1,40 @@
+package com.example.basickotlinpt1.basic.controlFlow
+
+fun main(){
+
+    //When
+    var x = 2
+    when(x){
+        1 -> println("X = 1 ")
+        2 -> println("X = 2 ")
+        else -> {
+            println("X tidak memiliki nilai")
+        }
+    }
+
+    //when expression Multiple option
+    var ujianAkhir = 'A'
+    when(ujianAkhir) {
+        'A', 'B', 'C'-> println("Kamu lulus ujian dengan predikat $ujianAkhir")
+        else ->{
+            println("jangan menyerah habis kan stok kegagalan muhh")
+        }
+    }
+
+    //when expression in
+    val nilaiAkhir = 'D'
+    val nilailulus = arrayOf('A', 'B', 'C')
+    when(nilaiAkhir){
+        in nilailulus -> println("KAMU LULUS")
+        !in nilailulus -> println("GAGAL COBA LAGIII")
+    }
+
+    //when tanda variable
+    val ujianPertengahan = 70
+    when {
+        ujianPertengahan >= 90 -> println("Anda pelajar tebaik")
+        ujianPertengahan >= 80 -> println("Nilai anda cukup")
+        else -> println("Belajar lagi abisin  stok gagal loe")
+    }
+
+}
